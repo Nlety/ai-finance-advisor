@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans SC', sans-serif;
+}
+
+/* 规划类型按钮 */
+.plan-type-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: linear-gradient(135deg, #fef3c7 0%, #d1fae5 100%);
+    border: 2px solid transparent;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.plan-type-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(234, 179, 8, 0.2);
+}
+
+.plan-type-btn.active {
+    background: linear-gradient(135deg, #fbbf24 0%, #10b981 100%);
+    color: white;
+    border-color: #f59e0b;
+    box-shadow: 0 8px 16px rgba(234, 179, 8, 0.3);
+}
+
+/* 示例按钮 */
+.example-btn {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: linear-gradient(135deg, #fef3c7 0%, #ecfccb 100%);
+    border: 1px solid #fde68a;
+    border-radius: 0.75rem;
+    text-align: left;
+    color: #78716c;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.875rem;
+}
+
+.example-btn:hover {
+    background: linear-gradient(135deg, #fde68a 0%, #d9f99d 100%);
+    border-color: #fbbf24;
+    color: #57534e;
+    transform: translateX(4px);
+}
+
+/* 表单区域 */
+.form-section {
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 模态框 */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    animation: modalSlideUp 0.3s ease;
+}
+
+@keyframes modalSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Toast 提示 */
+.toast {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: linear-gradient(135deg, #fbbf24 0%, #10b981 100%);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 2000;
+    font-weight: 500;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* 历史记录卡片 */
+.history-card {
+    padding: 1rem;
+    background: linear-gradient(135deg, #fef3c7 0%, #d1fae5 100%);
+    border: 1px solid #fde68a;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.history-card:hover {
+    background: linear-gradient(135deg, #fde68a 0%, #a7f3d0 100%);
+    box-shadow: 0 4px 12px rgba(234, 179, 8, 0.2);
+    transform: translateX(4px);
+}
+
+/* 响应式调整 */
+@media (max-width: 1024px) {
+    .plan-type-btn {
+        padding: 0.75rem;
+        font-size: 0.875rem;
+    }
+
+    .plan-type-btn span:first-child {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,15 @@
+{
+  "functions": [
+    {
+      "name": "finance-storage",
+      "script": "./edge-functions/finance-storage.js",
+      "route": "/api/finance/*",
+      "kv_namespaces": [
+        {
+          "binding": "FINANCE_KV",
+          "namespace_id": "ai_finance"
+        }
+      ]
+    }
+  ]
+}
