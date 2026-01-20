@@ -1,5 +1,9 @@
 # AI 个人理财师
 
+本项目由阿里云ESA提供加速、计算和保护
+
+<img src="https://img.alicdn.com/imgextra/i3/O1CN01H1UU3i1Cti9lYtFrs_!!6000000000139-2-tps-7534-844.png" width="50%" />
+
 💰 智能财务规划与消费决策助手
 
 ## 功能特点

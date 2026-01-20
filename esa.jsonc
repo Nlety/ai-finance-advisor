@@ -1,11 +1,7 @@
 {
-  "functions": [
-    {
-      "name": "finance-storage",
-      "script": "./edge-functions/finance-storage.js",
-      "assets": {
-          "directory": "./"
-      }
-    }
-  ]
+  "name": "finance-storage",
+  "script": "./edge-functions/finance-storage.js",
+  "assets": {
+      "directory": "./"
+  }
 }
